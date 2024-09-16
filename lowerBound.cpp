@@ -8,14 +8,14 @@ int lowerBound(int arr[] , int target , int n){
     {
         mid = (low + high) / 2;
         if(arr[mid] >= target){
-            ans = arr[mid];
+            ans = mid;
             high = mid - 1;
         }
         else{
             low = mid + 1;
         }
     }
-    
+    return ans;
 }
 int main(){
     int arr[5] = { 2 , 4 , 7 , 8 , 10 };
